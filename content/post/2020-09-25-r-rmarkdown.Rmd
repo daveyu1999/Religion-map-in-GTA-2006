@@ -13,6 +13,7 @@ library(tidyverse)
 install.packages("opendatatoronto")
 library(opendatatoronto)
 ```
+# Author info
 Author: Haoting Yu
 Date: 2020-09-26
 
