@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>A Hugo website</title>
+    <title>Haoting Yu‘s Website</title>
     <link>/</link>
-    <description>Recent content on A Hugo website</description>
+    <description>Recent content on Haoting Yu‘s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 21:49:57 -0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data records of ‘Place of worship’, a religion map in GTA</title>
+      <link>/2020/09/24/data-records-of-place-of-worship-a-religion-map-in-gta/</link>
+      <pubDate>Thu, 24 Sep 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/2020/09/24/data-records-of-place-of-worship-a-religion-map-in-gta/</guid>
+      <description>Abstract This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood.
+ Introduction This is a study of recording and organizing religious worship places in GTA, it is important for culture references not only for citizens, and also for the city government.</description>
+    </item>
+    
     <item>
       <title>A Plain Markdown Post</title>
       <link>/2016/12/30/a-plain-markdown-post/</link>

@@ -6,8 +6,8 @@
 <meta name="generator" content="Hugo 0.75.1" />
 
 
-<title>Hello R Markdown - Haoting Yu‘s Website</title>
-<meta property="og:title" content="Hello R Markdown - Haoting Yu‘s Website">
+<title>Data records of ‘Place of worship’, a religion map in GTA - Haoting Yu‘s Website</title>
+<meta property="og:title" content="Data records of ‘Place of worship’, a religion map in GTA - Haoting Yu‘s Website">
 
 
   <link href='../../../../favicon.ico' rel='icon' type='image/x-icon'/>
@@ -65,10 +65,10 @@
     <span class="article-duration">9 min read</span>
     
 
-    <h1 class="article-title">Hello R Markdown</h1>
+    <h1 class="article-title">Data records of ‘Place of worship’, a religion map in GTA</h1>
 
     
-    <span class="article-date">2015-07-23</span>
+    <span class="article-date">2020-09-25</span>
     
 
     <div class="article-content">
@@ -89,16 +89,16 @@ wanted_data
 ## # A tibble: 50 x 10
 ##    title id    topics civic_issues excerpt dataset_category num_resources
 ##    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;                    &lt;int&gt;
-##  1 Mobi… f2a2… Publi… Mobility     &quot;An ho… Document                     4
-##  2 Scho… d752… Trans… Mobility     &quot;An ho… Document                     5
-##  3 Traf… 1a10… Locat… Mobility     &quot;This … Document                    25
-##  4 Dail… 8a6e… City … Affordable … &quot;Daily… Table                        8
-##  5 Stre… ccfd… City … &lt;NA&gt;         &quot;Poste… Map                          1
-##  6 Stre… cf70… City … &lt;NA&gt;         &quot;Poste… Map                          1
-##  7 Stre… 3944… City … &lt;NA&gt;         &quot;Litte… Map                          1
-##  8 Stre… 99b1… City … &lt;NA&gt;         &quot;Infor… Map                          1
-##  9 Stre… 71e6… Trans… &lt;NA&gt;         &quot;Bike … Map                          1
-## 10 Stre… 0c4e… City … &lt;NA&gt;         &quot;Bench… Map                          1
+##  1 Buil… 8219… Devel… &lt;NA&gt;         Provid… Document                     3
+##  2 Buil… 108c… Devel… Affordable … Provid… Document                     3
+##  3 Lobb… 6a87… City … &lt;NA&gt;         The Lo… Document                     2
+##  4 Mobi… f2a2… Publi… Mobility     An hou… Document                     4
+##  5 Scho… d752… Trans… Mobility     An hou… Document                     5
+##  6 Traf… 1a10… Locat… Mobility     This d… Document                    25
+##  7 Dail… 8a6e… City … Affordable … Daily … Table                        8
+##  8 Stre… ccfd… City … &lt;NA&gt;         Poster… Map                          1
+##  9 Stre… cf70… City … &lt;NA&gt;         Poster… Map                          1
+## 10 Stre… 3944… City … &lt;NA&gt;         Litter… Map                          1
 ## # … with 40 more rows, and 3 more variables: formats &lt;chr&gt;, refresh_rate &lt;chr&gt;,
 ## #   last_refreshed &lt;date&gt;</code></pre>
 <pre class="r"><code>library(dplyr)
@@ -226,10 +226,26 @@ head(data)
 ## #   NEIGHBOURHOOD_NAME &lt;chr&gt;, geometry &lt;POINT [°]&gt;</code></pre>
 <pre class="r"><code>ggplot(data = data, aes(x = FTH_FAITH)) + geom_histogram(stat = &quot;count&quot;) + labs(x = &quot;Religion&quot;, y = &quot;Numbers&quot;)
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="../../../../post/2020-09-25-r-rmarkdown_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(data = data, aes(x = MUNICIPALITY)) + geom_histogram(stat = &quot;count&quot;)+labs(x = &quot;City&quot;,y = &quot;count&quot;)
 ## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
-<p><img src="../../../../post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="../../../../post/2020-09-25-r-rmarkdown_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data = data, aes(x = NEIGHBOURHOOD_NAME)) + geom_histogram(stat = &quot;count&quot;) + labs(x = &quot;Religion&quot;, y=&quot;Numbers&quot;)
+## Warning: Ignoring unknown parameters: binwidth, bins, pad</code></pre>
+<p><img src="../../../../post/2020-09-25-r-rmarkdown_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<p>-Sharla Gelfand (2020). opendatatoronto: Access the City of Toronto Open, data Portal.
+<a href="https://sharlagelfand.github.io/opendatatoronto/,https://github.com/sharlagelfand/opendatatoronto/" class="uri">https://sharlagelfand.github.io/opendatatoronto/,https://github.com/sharlagelfand/opendatatoronto/</a>.
+-Wickham et al., (2019). Welcome to the tidyverse. Journal of Open source Software, 4(43), 1686, https:
+//doi.org/10.21105/joss.01686
+-Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020).Dplyr: A Grammar of Data
+Manipulation. <a href="https://dplyr.tidyverse.org" class="uri">https://dplyr.tidyverse.org</a>, <a href="https://github.com/tidyverse/dplyr" class="uri">https://github.com/tidyverse/dplyr</a>.
+• R Core Team (2020). R: A language and environment for statistical computing. R Foundation for
+Statistical Computing, Vienna, Austria. URL: <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.
+-Tierney N (2017). “visdat: Visualising Whole Data Frames.” JOSS,2 (16),355. doi: 10.21105/joss.00355
+(URL:<a href="https://doi.org/10.21105/joss.00355" class="uri">https://doi.org/10.21105/joss.00355</a>), &lt;URL: <a href="http://dx.doi.org/10.21105/joss.00355" class="uri">http://dx.doi.org/10.21105/joss.00355</a>&gt;.</p>
 </div>
 
     </div>

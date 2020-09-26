@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>regression on A Hugo website</title>
+    <title>regression on Haoting Yu‘s Website</title>
     <link>/tags/regression/</link>
-    <description>Recent content in regression on A Hugo website</description>
+    <description>Recent content in regression on Haoting Yu‘s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate><atom:link href="/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data records of ‘Place of worship’, a religion map in GTA</title>
+      <link>/2020/09/24/data-records-of-place-of-worship-a-religion-map-in-gta/</link>
+      <pubDate>Thu, 24 Sep 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/2020/09/24/data-records-of-place-of-worship-a-religion-map-in-gta/</guid>
+      <description>Abstract This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood.
+ Introduction This is a study of recording and organizing religious worship places in GTA, it is important for culture references not only for citizens, and also for the city government.</description>
+    </item>
+    
     <item>
       <title>Hello R Markdown</title>
       <link>/2015/07/23/hello-r-markdown/</link>
