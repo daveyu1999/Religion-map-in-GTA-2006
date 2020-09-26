@@ -1,6 +1,7 @@
 ---
 title: "Data records of ‘Place of worship’, a religion map in GTA"
 author: "Haoting Yu"
+<<<<<<< HEAD
 date: 2020-09-24T21:13:14-05:00
 bibiography: references.bib
 abstract: "This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood."
@@ -9,6 +10,12 @@ tags:
 - R Markdown
 - plot
 - regression
+=======
+date: 2020-09-26-T21:13:14-05:00
+bibiography: "references.bib"
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+>>>>>>> d3a121479bf2c737affb6cf62e1b530ec6a186cb
 ---
 
 ```{r setup, include=FALSE}
