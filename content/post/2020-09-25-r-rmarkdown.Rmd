@@ -18,7 +18,6 @@ install.packages("opendatatoronto")
 library(opendatatoronto)
 ```
 Author: Haoting Yu
-Date: 2020-09-26
 
 # Abstract
 
