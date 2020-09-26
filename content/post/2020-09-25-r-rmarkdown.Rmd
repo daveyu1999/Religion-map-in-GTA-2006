@@ -17,7 +17,8 @@ library(tidyverse)
 install.packages("opendatatoronto")
 library(opendatatoronto)
 ```
-Author: Haoting Yu
+# Author
+Haoting Yu
 
 # Abstract
 
