@@ -1,7 +1,7 @@
 ---
 title: "Data records of ‘Place of worship’, a religion map in GTA"
 author: "Haoting Yu"
-date: 2020-09-24T21:13:14-05:00
+date: 2020-09-25T21:13:14-05:00
 bibiography: references.bib
 abstract: "This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood."
 categories: R
@@ -49,7 +49,7 @@ head(data)
 ```
 
 ```{r}
-ggplot(data = data, aes(x = FTH_FAITH)) + geom_histogram(stat = "count") + labs(x = "Religion", y = "Numbers")
+ggplot(data = data, aes(x = FTH_FAITH)) + geom_histogram(stat = "count") + labs(x = "Religion", y = "Numbers") 
 ```
 
 ```{r}
