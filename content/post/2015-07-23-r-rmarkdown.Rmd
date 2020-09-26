@@ -1,0 +1,70 @@
+---
+title: "Data records of ‘Place of worship’, a religion map in GTA"
+author: "Frida Gomam"
+date: 2015-07-23T21:13:14-05:00
+bibiography: "references.bib"
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(tidyverse)
+install.packages("opendatatoronto")
+library(opendatatoronto)
+```
+
+# Abstract
+
+This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood.
+
+# Introduction
+  This is a study of recording and organizing religious worship places in GTA, it is important for culture references not only for citizens, and also for the city government. It is a comprehensive research and data and shows precise number of places for different religions, this leads to majority citizens preferences,and what all the religions are being recognized in GTA. People can have a better idea of where they should go to for their own preferences, and make their life easier.
+  What I did, was to make three histograms in which the first one categorized religions into different groups,and the amount of the places, turns out that most churches being recorded is christian church, and followed by Jewish, and then Buddhist. The second graph shows that the city of Toronto has the biggest number of facilities in GTA, followed by North York, then Scarborough. The third graph gives me the more precise locations, other than just viewing by city. Precisely how many churches/temples in different neighborhood. The down side of this data is that, it haven’t been updated for over a decade, so we are having difficulties looking for the current status of these places. As well as the lack of information on contacts, neither by phone, nor email, even the name of the people in charge is missing in some area. So the map itself is very convenient to look at,however it is hard to make actual contacts for people who are in need of it.
+  
+```{r}
+library(opendatatoronto)
+wanted_data <- list_packages()
+wanted_data
+```
+```{r}
+library(dplyr)
+package <- show_package("8e22e693-3394-4dfa-8dc0-eb436db38603")
+package
+resources <- list_package_resources("8e22e693-3394-4dfa-8dc0-eb436db38603")
+datastore_resources <- filter(resources, tolower(format) %in% c('csv', 'geojson'))
+data <- filter(datastore_resources, row_number()==1) %>% get_resource()
+data
+resources
+```
+```{r}
+glimpse(filter(datastore_resources, row_number()==1) %>% get_resource())
+head(data)
+```
+
+```{r}
+ggplot(data = data, aes(x = FTH_FAITH)) + geom_histogram(stat = "count") + labs(x = "Religion", y = "Numbers")
+```
+
+```{r}
+ggplot(data = data, aes(x = MUNICIPALITY)) + geom_histogram(stat = "count")+labs(x = "City",y = "count")
+```
+
+```{r}
+ggplot(data = data, aes(x = NEIGHBOURHOOD_NAME)) + geom_histogram(stat = "count") + labs(x = "Religion", y="Numbers")
+```
+
+
+# References 
+
+-Sharla Gelfand (2020). opendatatoronto: Access the City of Toronto Open, data Portal.
+https://sharlagelfand.github.io/opendatatoronto/,https://github.com/sharlagelfand/opendatatoronto/.
+-Wickham et al., (2019). Welcome to the tidyverse. Journal of Open source Software, 4(43), 1686, https:
+//doi.org/10.21105/joss.01686
+-Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020).Dplyr: A Grammar of Data
+Manipulation. https://dplyr.tidyverse.org, https://github.com/tidyverse/dplyr.
+• R Core Team (2020). R: A language and environment for statistical computing. R Foundation for
+Statistical Computing, Vienna, Austria. URL: https://www.R-project.org/.
+-Tierney N (2017). “visdat: Visualising Whole Data Frames.” JOSS,2 (16),355. doi: 10.21105/joss.00355
+(URL:https://doi.org/10.21105/joss.00355), <URL: http://dx.doi.org/10.21105/joss.00355>.
+
