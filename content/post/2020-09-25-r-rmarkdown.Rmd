@@ -1,10 +1,14 @@
 ---
 title: "Data records of ‘Place of worship’, a religion map in GTA"
 author: "Haoting Yu"
-date: 2020-09-26.T21:13:14-05:00
-bibiography: "references.bib"
-categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+date: 2020-09-24T21:13:14-05:00
+bibiography: references.bib
+abstract: "This is a research project of local church/tempo etc in GTA, last updated 2006. People of different religions can have a clear idea of how where in GTA it has the places for them to worship. Also we can see the population divided by religion; and where exactly the places are, precisely, which neighborhood."
+categories: R
+tags:
+- R Markdown
+- plot
+- regression
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +17,6 @@ library(tidyverse)
 install.packages("opendatatoronto")
 library(opendatatoronto)
 ```
-# Author info  
 Author: Haoting Yu
 Date: 2020-09-26
 
